@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirag Platform - Towards a Corruption-Free India</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for custom styles and Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1D4ED8', // Darker Blue for main elements
+                        'accent-yellow': '#FBBF24', // Yellow for emphasis
+                        'card-bg-light': '#FFFFFF',
+                        'card-bg-dark': '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for a professional touch */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .blank-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .blank-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        /* Dark mode styles */
+        .dark {
+            background-color: #111827;
+            color: #E5E7EB;
+        }
+        .dark .bg-card-bg-light {
+            background-color: #1F2937;
+            border-color: #374151;
+        }
+        .dark .text-gray-700 {
+            color: #D1D5DB;
+        }
+        .dark .border-gray-200 {
+             border-color: #374151;
+        }
+        .logo-placeholder {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1D4ED8;
+        }
+        .dark .logo-placeholder {
+            color: #93C5FD;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Header / Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-800 transition duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Blank Logo Placeholder -->
+            <a href="#" class="logo-placeholder">
+                <span class="text-primary-blue dark:text-accent-yellow">CHIRAG</span> Initiative
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300 font-medium">
+                <a href="#home" class="hover:text-primary-blue transition duration-150">Home</a>
+                <a href="#current-affairs" class="hover:text-primary-blue transition duration-150">Current Affairs</a>
+                <a href="#articles" class="hover:text-primary-blue transition duration-150">Articles</a>
+                <a href="#mission" class="hover:text-primary-blue transition duration-150">Our Mission</a>
+            </nav>
+
+            <!-- Blank Buttons & Dark Mode Toggle -->
+            <div class="flex items-center space-x-3">
+                <!-- Blank Button: Login -->
+                <button onclick="handleButtonClick('Login')" class="blank-button hidden sm:block px-4 py-2 text-sm font-semibold rounded-full text-primary-blue border border-primary-blue hover:bg-primary-blue hover:text-white transition duration-200">
+                    Login/Register
+                </button>
+                <!-- Blank Button: Donate -->
+                <button onclick="handleButtonClick('Donate')" class="blank-button px-4 py-2 text-sm font-semibold rounded-full bg-accent-yellow text-gray-900 hover:bg-yellow-500 transition duration-200">
+                    Donate Now
+                </button>
+
+                <!-- Dark Mode Toggle -->
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200" aria-label="Toggle dark mode">
+                    <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+
+        <!-- 1. Hero Section: Mission Statement -->
+        <section id="home" class="py-20 px-4 sm:px-6 lg:px-8 bg-primary-blue dark:bg-gray-700 text-white rounded-b-xl shadow-lg transition duration-300">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                    The Road to a <span class="text-accent-yellow">Corruption-Free India</span>
+                </h1>
+                <p class="text-xl sm:text-2xl font-light max-w-3xl mx-auto mb-8 opacity-90">
+                    Empowering citizens through transparency, informed current affairs, and deep-dive policy analysis. Your source for accountable governance.
+                </p>
+                <!-- Blank Button: Explore -->
+                <button onclick="handleButtonClick('Explore Content')" class="blank-button px-8 py-3 text-lg font-bold rounded-full bg-white text-primary-blue hover:bg-gray-200 transition duration-200">
+                    Start Exploring Content
+                </button>
+            </div>
+        </section>
+
+        <!-- 2. Daily News / Current Affairs -->
+        <section id="current-affairs" class="py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">Daily Updates & Current Affairs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <article class="bg-card-bg-light dark:bg-card-bg-dark rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 transition duration-300">
+                    <span class="text-sm font-semibold text-primary-blue dark:text-accent-yellow uppercase">Policy Watch</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">New Digital Transparency Portal Launched in State X</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm">The government has rolled out a unified portal for public fund tracking, a major step towards reducing bureaucratic pilferage...</p>
+                    <!-- Blank Button: Read More -->
+                    <button onclick="handleButtonClick('Read News 1')" class="blank-button mt-4 text-sm font-semibold text-primary-blue hover:text-blue-700 transition duration-150">
+                        Read Full Report &rarr;
+                    </button>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="bg-card-bg-light dark:bg-card-bg-dark rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 transition duration-300">
+                    <span class="text-sm font-semibold text-primary-blue dark:text-accent-yellow uppercase">Governance</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">The Impact of Whistleblower Protection Acts: A National Review</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm">A look into how effective current legal frameworks are in protecting individuals who report unethical practices across major sectors...</p>
+                    <!-- Blank Button: Read More -->
+                    <button onclick="handleButtonClick('Read News 2')" class="blank-button mt-4 text-sm font-semibold text-primary-blue hover:text-blue-700 transition duration-150">
+                        Read Full Report &rarr;
+                    </button>
+                </article>
+                
+                <!-- News Card 3 -->
+                <article class="bg-card-bg-light dark:bg-card-bg-dark rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 transition duration-300">
+                    <span class="text-sm font-semibold text-primary-blue dark:text-accent-yellow uppercase">Editorial</span>
+                    <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Solar Energy and SDGs: The Ethical Imperative in Infrastructure Projects</h3>
+                    <p class="text-gray-700 dark:text-gray-400 text-sm">Examining the intersection of sustainable development goals and the need for zero-tolerance in massive public infrastructure bids...</p>
+                    <!-- Blank Button: Read More -->
+                    <button onclick="handleButtonClick('Read News 3')" class="blank-button mt-4 text-sm font-semibold text-primary-blue hover:text-blue-700 transition duration-150">
+                        Read Full Report &rarr;
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. Featured Articles -->
+        <section id="articles" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800 transition duration-300">
+            <h2 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-gray-100">In-Depth Articles & Analysis</h2>
+            
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <!-- Article Preview 1 -->
+                <div class="bg-card-bg-light dark:bg-card-bg-dark rounded-xl p-6 shadow-md flex flex-col md:flex-row gap-6 border border-gray-200 dark:border-gray-700 transition duration-300">
+                    <div class="md:w-3/4">
+                        <span class="text-sm font-semibold text-accent-yellow uppercase">Economic Accountability</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3 leading-tight">Decoding the Procurement Process: Identifying Key Leakage Points</h3>
+                        <p class="text-gray-700 dark:text-gray-400">A detailed five-part series on government tenders and contract management, offering solutions for implementing real-time, tamper-proof audit trails...</p>
+                        <!-- Blank Button: Continue Reading -->
+                        <button onclick="handleButtonClick('Continue Reading Article 1')" class="blank-button mt-4 text-primary-blue font-semibold hover:underline transition duration-150">
+                            Continue Reading &rarr;
+                        </button>
+                    </div>
+                    <!-- Blank Image Placeholder -->
+                    <div class="md:w-1/4 h-32 md:h-auto bg-gray-200 dark:bg-gray-600 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-400">
+                        <span class="text-sm">Analysis Chart Placeholder</span>
+                    </div>
+                </div>
+
+                <!-- Article Preview 2 -->
+                <div class="bg-card-bg-light dark:bg-card-bg-dark rounded-xl p-6 shadow-md flex flex-col md:flex-row gap-6 border border-gray-200 dark:border-gray-700 transition duration-300">
+                    <div class="md:w-3/4">
+                        <span class="text-sm font-semibold text-accent-yellow uppercase">Civic Action</span>
+                        <h3 class="text-2xl font-bold mt-2 mb-3 leading-tight">The Power of RTI: How Citizens Are Using Data to Drive Change</h3>
+                        <p class="text-gray-700 dark:text-gray-400">Case studies highlighting successful outcomes where local activists and communities leveraged the Right to Information Act to expose systemic issues...</p>
+                        <!-- Blank Button: Continue Reading -->
+                        <button onclick="handleButtonClick('Continue Reading Article 2')" class="blank-button mt-4 text-primary-blue font-semibold hover:underline transition duration-150">
+                            Continue Reading &rarr;
+                        </button>
+                    </div>
+                    <!-- Blank Image Placeholder -->
+                    <div class="md:w-1/4 h-32 md:h-auto bg-gray-200 dark:bg-gray-600 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-400">
+                        <span class="text-sm">Case Study Placeholder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Mission & Call to Action -->
+        <section id="mission" class="py-20 px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Join the Movement for Transparency</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8 text-gray-700 dark:text-gray-400">
+                A corruption-free future is possible only with an informed and active citizenry. Subscribe to our newsletter for curated updates and ways to get involved.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-xl mx-auto">
+                <!-- Blank Input Field Placeholder -->
+                <input type="email" placeholder="Enter your email address" class="w-full sm:w-2/3 p-3 border border-gray-300 rounded-full focus:ring-primary-blue focus:border-primary-blue dark:bg-gray-700 dark:border-gray-600 dark:text-white" />
+                <!-- Blank Button: Subscribe -->
+                <button onclick="handleButtonClick('Subscribe')" class="blank-button w-full sm:w-1/3 p-3 bg-primary-blue text-white font-semibold rounded-full hover:bg-blue-700 transition duration-200">
+                    Subscribe
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-gray-950 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-bold mb-3 text-accent-yellow">CHIRAG</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-primary-blue">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary-blue">Contact</a></li>
+                        <li><a href="#" class="hover:text-primary-blue">Careers (Blank)</a></li>
+                        <li><a href="#" class="hover:text-primary-blue">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3 text-accent-yellow">Resources</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#current-affairs" class="hover:text-primary-blue">News Archive</a></li>
+                        <li><a href="#articles" class="hover:text-primary-blue">Research Papers (Blank)</a></li>
+                        <li><a href="#" class="hover:text-primary-blue">RTI Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3 text-accent-yellow">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-primary-blue">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-primary-blue">Copyright</a></li>
+                        <li><a href="#" class="hover:text-primary-blue">Security</a></li>
+                    </ul>
+                </div>
+                <!-- Blank Social Media Logos/Links -->
+                <div>
+                    <h4 class="font-bold mb-3 text-accent-yellow">Connect</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="p-2 rounded-full bg-gray-700 hover:bg-primary-blue transition duration-200" aria-label="Social Media Link 1">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.013 4.851.072 1.34.062 2.053.284 2.508.468.495.201.897.478 1.233.815s.614.738.815 1.233c.184.455.406 1.168.468 2.508.059 1.267.072 1.647.072 4.851s-.013 3.584-.072 4.851c-.062 1.34-.284 2.053-.468 2.508-.201.495-.478.897-.815 1.233s-.738.614-1.233.815c-.455.184-1.168.406-2.508.468-1.267.059-1.647.072-4.851.072s-3.584-.013-4.851-.072c-1.34-.062-2.053-.284-2.508-.468-.495-.201-.897-.478-1.233-.815s-.614-.738-.815-1.233c-.184-.455-.406-1.168-.468-2.508-.059-1.267-.072-1.647-.072-4.851s.013-3.584.072-4.851c.062-1.34.284-2.053.468-2.508.201-.495.478-.897.815-1.233s.738-.614 1.233-.815c.455-.184 1.168-.406 2.508-.468 1.267-.059 1.647-.072 4.851-.072zm0-2.163c-3.266 0-3.673.013-4.94.072-1.428.066-2.38.303-3.08.577-.735.289-1.341.696-1.939 1.294s-1.005 1.204-1.294 1.939c-.274.7-.511 1.652-.577 3.08-.059 1.267-.072 1.674-.072 4.94s.013 3.673.072 4.94c.066 1.428.303 2.38.577 3.08.289.735.696 1.341 1.294 1.939s1.204 1.005 1.939 1.294c.7.274 1.652.511 3.08.577 1.267.059 1.674.072 4.94.072s3.673-.013 4.94-.072c1.428-.066 2.38-.303 3.08-.577.735-.289 1.341-.696 1.939-1.294s1.005-1.204 1.294-1.939c.274-.7.511-1.652.577-3.08.059-1.267.072-1.674.072-4.94s-.013-3.673-.072-4.94c-.066-1.428-.303-2.38-.577-3.08-.289-.735-.696-1.341-1.294-1.939s-1.005-1.005-1.939-1.294c-.7-.274-1.652-.511-3.08-.577-1.267-.059-1.674-.072-4.94-.072zM12 15.35c-1.858 0-3.35-1.503-3.35-3.35s1.492-3.35 3.35-3.35 3.35 1.503 3.35 3.35-1.492 3.35-3.35 3.35zm0-4.85c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm6.5-1.235c-.387 0-.7.313-.7.7s.313.7.7.7.7-.313.7-.7-.313-.7-.7-.7z"/></svg>
+                        </a>
+                        <a href="#" class="p-2 rounded-full bg-gray-700 hover:bg-primary-blue transition duration-200" aria-label="Social Media Link 2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zm-7 19h-2v-8h2v8zm-2-9a1 1 0 110-2 1 1 0 010 2zm10 9h-2v-4a2 2 0 00-2-2c-1.1 0-2.02.7-2.36 1.63L14 14.5V19h-2v-8h2v1.5c.34-.84 1.26-1.5 2.36-1.5a2.5 2.5 0 012.5 2.5V19z"/></svg>
+                        </a>
+                        <a href="#" class="p-2 rounded-full bg-gray-700 hover:bg-primary-blue transition duration-200" aria-label="Social Media Link 3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.316c-.882.39-1.834.654-2.836.772.96-.575 1.693-1.488 2.046-2.584-.897.532-1.897.923-2.956 1.137C19.467 2.365 18.396 2 17.277 2c-2.573 0-4.664 2.091-4.664 4.664 0 .365.042.719.123 1.054-3.876-.194-7.303-2.049-9.601-4.868-.401.69-.631 1.488-.631 2.348 0 1.616.822 3.044 2.069 3.876-.763-.024-1.48-.235-2.105-.582v.059c0 2.261 1.606 4.145 3.731 4.577-.39.106-.8.163-1.229.163-.301 0-.594-.029-.877-.083.593 1.847 2.308 3.193 4.346 3.23a9.347 9.347 0 01-5.772 1.993c-.376 0-.749-.022-1.116-.065 2.067 1.325 4.516 2.097 7.155 2.097C17.276 21.999 21 16.637 21 6.815c0-.208-.005-.415-.013-.62.86-.622 1.603-1.397 2.193-2.28z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
+                &copy; 2024 CHIRAG Initiative. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Dark Mode and Button Actions -->
+    <script>
+        // Placeholder function for button clicks (to avoid using alert())
+        function handleButtonClick(buttonName) {
+            console.log(`Action requested: ${buttonName}. This would trigger a backend process or navigate to a dedicated page.`);
+            
+            // Example custom message box for a key action
+            if (buttonName === 'Donate') {
+                const messageBox = document.createElement('div');
+                messageBox.innerHTML = `
+                    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                        <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-2xl max-w-sm w-full transition transform duration-300 scale-100">
+                            <h4 class="text-xl font-bold mb-3 text-primary-blue dark:text-accent-yellow">Donation Gateway (Blank)</h4>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4">Thank you for your interest! This is a placeholder for the secure payment process.</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Action: Console logged "${buttonName}" action.</p>
+                            <button onclick="this.parentNode.parentNode.remove()" class="mt-4 px-4 py-2 bg-accent-yellow text-gray-900 rounded-full font-semibold hover:bg-yellow-500">Close</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(messageBox);
+            }
+        }
+
+        // Dark Mode Implementation
+        const toggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to system preference
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+
+        function toggleDarkMode() {
+            html.classList.toggle('dark');
+            
+            // Save preference to localStorage
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Event listener for the button
+        toggle.addEventListener('click', toggleDarkMode);
+
+        // Apply theme on load
+        loadTheme();
+    </script>
+</body>
+</html>
