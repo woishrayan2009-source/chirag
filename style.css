@@ -1,0 +1,60 @@
+/*
+ * NOTE: This CSS file contains only the custom rules.
+ * The vast majority of the styling (layout, padding, responsiveness)
+ * is handled by the Tailwind CSS utility classes linked in the HTML file.
+ */
+
+/* Custom styles for a professional touch */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Smooth transition for dark mode */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.blank-button {
+    transition: all 0.3s ease;
+    /* subtle shadow */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+.blank-button:hover {
+    /* slight lift effect */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-placeholder {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1D4ED8; /* Custom primary-blue from Tailwind config */
+}
+
+
+/* --- Dark Mode Styles (Overrides) --- */
+
+/* Main body in dark mode */
+.dark {
+    background-color: #111827;
+    color: #E5E7EB;
+}
+
+/* Card background in dark mode */
+.dark .bg-card-bg-light {
+    background-color: #1F2937;
+    border-color: #374151;
+}
+
+/* Adjusting secondary text color for better contrast in dark mode */
+.dark .text-gray-700 {
+    color: #D1D5DB;
+}
+
+/* Adjusting light borders in dark mode */
+.dark .border-gray-200 {
+     border-color: #374151;
+}
+
+/* Adjusting logo color in dark mode */
+.dark .logo-placeholder {
+    color: #93C5FD;
+}
